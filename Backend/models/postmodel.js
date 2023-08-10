@@ -12,5 +12,4 @@ let postschema = new mongoose.Schema({
 })
 
 let userpost = mongoose.model('Post', postschema)
-
 module.exports = userpost
