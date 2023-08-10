@@ -34,15 +34,14 @@ userRouter.post('/signin', async (req, res) => {
     }
     register.findOne({email: email}).then((user) => {
         if(!user){
-            return res.json(`Please register...`)
+            return res.json(`User not fount`)
         }
         bcrypt.compare(password, user.password).then((isMatch) => {
             if(!isMatch) {
                 return res.json(`Invalid email/password`)
             }
             const token = jwt.sign({id: user._id, email: user.email}, SECRET_CODE)
-            const {name, email} = user
-            res.json({token, user:{name, email}})
+            res.json(token)
         })
         .catch(err => console.log(err))
     })
