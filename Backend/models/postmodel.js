@@ -5,7 +5,6 @@ let postschema = new mongoose.Schema({
     Type:String,
     Start_Date:String,
     End_Date:String,
-    Action:String,
     user:{type:mongoose.Schema.Types.ObjectId,ref:'registerDetails'}
 
 

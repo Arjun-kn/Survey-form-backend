@@ -33,7 +33,7 @@ postapp.post("/userpost", authenticateUser, (req, res) => {
         Type: req.body.Type,
         Start_Date: req.body.Start_Date,
         End_Date: req.body.End_Date,
-        Action: req.body.Action,
+       
       });
 
       newdata
@@ -88,7 +88,7 @@ postapp.put("/userpost/:postId", authenticateUser, (req, res) => {
             Type: req.body.Type,
             Start_Date: req.body.Start_Date,
             End_Date: req.body.End_Date,
-            Action: req.body.Action,
+            
           },
         },
         { new: true }
