@@ -4,7 +4,7 @@
   "description": "this is survey form project",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
